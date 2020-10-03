@@ -2,13 +2,188 @@
 
 <html>
   <head>
-    <title>INSERT TITLE HERE!</title>
+    <title>Personas</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
     <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
   </head>
 
   <body>
+    <h1>On Personas & Storyboards: A Study of the Washing Machine UI</h1>
     <!-- TODO: put your HTML code here! -->
+    <p>The washing machine is an essential household item found in most homes. Despite
+      playing such an integral role in our everyday lives, it is not always easy to operate:
+      while some washing machine interfaces only comprise of a few buttons, others are much
+      more complicated. By observing how real users interact with these more convoluted 
+      interfaces, we can gain valuable designs insights by creating personas and storyboards
+      to create future products better suited to their needs in the future. 
+    </p>
+
+    <h2>The Washing Machine UI</h2>
+
+    The following is a sketch of a more complicated washing machine interface.
+    <figure>
+      <img class="interface-sketch" src="./img/interface-sketch.png" />
+      <figcaption>This interface lets the user select different settings at which 
+        to wash their clothes. The interactive components function as follows: 
+        (1) press the power button to turn on, (2) rotate the knob to determine the mode,
+        (3) press the flat buttons to finetune settings, and (4) press the start button to confirm. </figcaption>
+    </figure>
+    <h2>User Observations</h2>
+
+    <p>To explore how everyday users interacted with this interface, I observed and interviewed 3
+      users who had access to the interface. To guarantee a wide spectrum of possible experiences,
+      one user was chosen because they had never seen the interface before while the two other were
+      selected as they were previously seen using the interface.
+    </p>
+
+    <h3>User 1</h3>
+    <ul>
+      <li>Started with the right panel on the interface: tried pressing on 
+        the flat buttons but didn't get a response, expressed a "what?"</li>
+      <li>After finding the power button, clicked and rotated through all the flat 
+        button and knob options, respectively
+      <li>Expressed an "oh my god" when clicking the "Delay Wash" button as the
+        blue display cycled through numbers 1-13 before returning to 0, 
+        at which the user moved on to other buttons</li>
+      <li>Asked "where is the timer?" twice</li>
+      <li>Changed the knob back to "Normal" mode before pressing start button</li>
+    </ul>
+
+    <h3>User 2</h3>
+    <ul>
+      <li>Started by pressing the power button, then immediately rotated the knob
+        to "Normal" mode and pressed the start button
+      </li>
+      <li>Glanced at, but did not touch the right panel at all
+      <li>After pressing the start button, noted the timer on the display 
+        and created a corresponding one on their phone
+      </li>
+    </ul>
+
+    <h3>User 3</h3>
+    <ul>
+      <li>Started by pressing the power button, then rotated the knob to "Heavy Duty" mode</li>
+      <li>Pressed the "TEMP" and "Extra Rinse" flat buttons on the right panel, both repeatedly without
+        waiting for a response, then more times again to correct themselves.
+      </li>
+      <li>Tapped foot periodically through the session</li>
+      <li>Spent around the same time pressing buttons as User 2, even though they had more 
+        buttons to press.
+      </li>
+    </ul>
+
+    From these observations, it seems like although the interface is rather unfriendly to new users, experienced 
+    users can manipulate it easily with repeated usage. This choice in design seems well suited
+    for the washing machine, since it is a machine typical someone uses on a at least monthly if not weekly basis.
+
+    <h2>Interview Questions</h2>
+
+      After interacting with the washing machine interface, each user was then asked the following
+      questions. Their responses are summarized below:
+      <ol>
+        <li>How often do you use washing machines?
+          <div class="question-responses">
+            The second user uses washing machines weekly while the others use them biweekly.
+          </div>
+        <li>In general, you find washing machine interfaces ______ to use.
+          <div class="slidecontainer">
+            <span class="left">Extremely easy (1)</span>​<span class="right">Extremely difficult (10)</span>
+            <input type="range" min="1" max="10" value="1" class="slider" id="myRange">
+          </div>
+          <div class="question-responses">
+            All users seem to agree that washing machine interfaces in general were relatively easy (3-4) to use.
+          </div>
+        </li>
+        <li>On average, how long do you think it should take to set and start a washing machine?</li>
+        <div class="question-responses">
+          The first-time user expected a longer time (2 minutes) while the experienced users expected less time (30 seconds, 1 minute).
+          Interesting, the user who expected the longest time also spent the longest time on the interface. This could be
+          a example of expectations translating into actions.
+        </div>
+        <li>What was your goal when using the interface?</li>
+        <div class="question-responses">
+          Each user had different goals: the first-time user wanted to understand what all the buttons 
+          meant since it was their first time using it, one experienced user (User 2) only wanted to begin washing their clothes as soon as possible, and
+          the other experienced user (User 3) wanted to pick a setting for heavy soiled laundry quickly.
+        </div>
+        <li>Describe the process of starting the washing machine using this interface. Why?
+          <div class="slidecontainer">
+            <span class="left">Extremely easy (1)</span>​<span class="right">Extremely difficult (10)</span>
+            <input type="range" min="1" max="10" value="1" class="slider" id="myRange">
+          </div></li>
+          <div class="question-responses">
+            The first two users found starting the machine quite easy (4, 2), stating that there are two
+            very obvious power and start buttons that they needed to press. However, User 2 did note that they only knew how to set the basic "Normal" mode setting and had no idea how to set the
+            other ones since they had no interest in altering the settings. User 3 chose average difficulty (5), stating that there were a lot of buttons and 
+            it was not immediately clear what the display is showing since the response to button presses were not quick enough.
+          </div>
+        <li>You understood what the washing machine was capable of from the interface. Why/why not?
+          <div class="slidecontainer">
+            <span class="left">Strongly agree (1)</span>​<span class="right">Strongly disagree (10)</span>
+            <input type="range" min="1" max="10" value="1" class="slider" id="myRange">
+          </div>
+        </li>
+        <div class="question-responses">
+          User 2 who focused on speed disagreed (7), stating that too many 
+          modes made it confusing and deterred them from exploring the functions. The other two users agreed (3, 4),
+          noting that the usage of text labels instead of symbols directly conveyed their functionality and despite
+          being slightly overwhelming at first, the responsive indicators of the interface helped them understand
+          what the buttons did (although User 3 didn't like how the response was slightly delayed).
+        </div>
+        <li>Describe your overall experience using the interface. Why?
+          <div class="slidecontainer">
+            <span class="left">Very enjoyable (1)</span>​<span class="right">Very frustrating (10)</span>
+            <input type="range" min="1" max="10" value="1" class="slider" id="myRange">
+          </div>
+        </li>
+        <div class="question-responses">
+          Only the second user enjoyed using the interface (3), stating that they liked the sounds of the buttons.
+          The other two users were more neutral (5, 6), noting that it just "got the job done."
+        </div>
+      </ol>
+
+    
+      <h2>Personas</h2>
+
+      Based on overarching trends from the observations and interview answers above, 
+      I constructed two personas using a four-quadrant empathy map in hopes of creating good representations
+      of the spectrum of users that may interact with the washing machine interface.
+
+      <div class="persona-container">
+        <figure class="personas">
+          <img src="./img/curiouscharlie.svg" />
+          <figcaption><b>Curious Charlie</b> is a retired academic who still loves to learn. Meticulous and punctual, 
+            he recently stained his favorite shirt. <br></br> His main issue with the washing machine interface is that it is
+            very different from the ones he is used to and he cannot find functions that are important to him (i.e the
+            timer) that the washing machine surely has from the display. <br></br>This persona takes his carefulness, 
+            curiosity, and eventually understanding of the interface from User 1, his focus on the timer from Users 1 and 2, 
+            and his focus on hot water / heavier settings from User 3. </figcaption>
+        </figure>
+  
+        <figure class="personas">
+          <img src="./img/impatienticarus.svg" />
+          <figcaption><b>Impatient Icarus</b> is a middle schooler who loves video games. Because he played
+          too much recently, his mom tasked him with doing the laundry. <br></br> (As a first time user) He finds the clutter of 
+          the washing machine interface overwhelming (especially the right panel) and thinks it takes too long to learn as he
+          does not interact with the other buttons. <br></br> This persona takes his short outbursts from User 1,
+          his short button press patterns and subsequent lack of understanding from User 2, and his impatience from User 3</figcaption>
+        </figure>
+      </div>
+
+      <h2>Storyboard</h2>
+
+      Using the Impatient Icarus persona from above, I then created a storyboard envisioning how this persona 
+      will typically react and use the washing machine interface:
+
+      <img class="storyboard" src="./img/storyboard.png" />
+
+      <p>Overall, it seems like despite a complicated interface that turns off first-time users from accessing all
+        the functions of the washing machine, the interface still does its job in allowing the user to <i>start</i> it. Possible 
+        improvements to its understandability can include faster response times for the light indicators as well as
+        a cleaner redesigned layout that appears less cluttered.
+      </p>
+      
   </body>
 </html>
